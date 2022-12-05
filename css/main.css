@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/background.gif);
+    background-size: cover;
+    background-repeat: repeat;
+    text-align: center;
+    height: 45vw;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 70PX;
+    color: whitesmoke;
+    font-style: italic;
+    max-width: 40ch;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+span {
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+    animation: fade-in 1.0s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 1.0s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
+}
+
+span:nth-child(4) {
+    animation: fade-in 1.0s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
+}
+
+span:nth-child(5) {
+    animation: fade-in 2.0s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.start {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 150px;
+    background-image: linear-gradient(to bottom right, rgb(30, 216, 182), rgb(210, 37, 179));
+    color: rgb(0, 0, 0);
+    font-size: 30PX;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 30PX;
+    cursor: pointer;
+}
+
+.levels {
+    margin-top: 30px;
+    height: 50px;
+    width: 150px;
+    color: rgb(0, 0, 0);
+    font-size: 30PX;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 30PX;
+    cursor: pointer;
+}
+
+#l0 {
+    background-image: linear-gradient(to bottom right, rgb(23, 213, 68), rgb(255, 255, 255));
+}
+
+#l1 {
+    background-image: linear-gradient(to bottom right, rgb(223, 123, 9), rgb(255, 255, 255));
+}
+
+#l2 {
+    background-image: linear-gradient(to bottom right, rgb(215, 33, 33), rgb(255, 255, 255));
+}
+
+.nextStep {
+    line-height: 50px;
+    height: 50px;
+    width: 400px;
+    display: none;
+    color: white;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.5;
+    margin: auto;
+    margin-top: 30px;
+}
+
+table {
+    border: none;
+    margin: auto;
+    margin-top: 40PX;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.board td {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 70px;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.board td:hover {
+    background-color: rgb(200, 59, 210);
+    opacity: 0.6;
+    color: white;
+}
+
+#winner {
+    animation: winner 20s 1;
+    -webkit-animation: winner 20s 1;
+}
+
+@-webkit-keyframes winner
+
+/* Safari and Chrome */
+    {
+    0% {
+        background: white;
+    }
+
+    10% {
+        background: rgb(38, 51, 193);
+    }
+
+    20% {
+        background: white;
+    }
+
+    30% {
+        background: rgb(38, 51, 193);
+    }
+
+    40% {
+        background: white;
+    }
+
+    50% {
+        background: rgb(38, 51, 193);
+    }
+
+    60% {
+        background: white;
+    }
+
+    70% {
+        background: rgb(38, 51, 193);
+    }
+
+    80% {
+        background: white;
+    }
+
+    90% {
+        background: rgb(38, 51, 193);
+    }
+
+    100% {
+        background: white;
+    }
+}
+
+#correct {
+    animation: correct 4s 1;
+    -webkit-animation: correct 4s 1;
+}
+
+@-webkit-keyframes correct
+
+/* Safari and Chrome */
+    {
+    0% {
+        background: white;
+    }
+
+    25% {
+        background: rgb(100, 220, 100);
+    }
+
+    75% {
+        background: white;
+    }
+
+    100% {
+        background: rgb(100, 220, 100);
+    }
+}
+
+#wrong {
+    animation: wrong 4s 1;
+    -webkit-animation: wrong 4s 1;
+}
+
+@-webkit-keyframes wrong {
+    0% {
+        background: white;
+    }
+
+    25% {
+        background: rgb(219, 44, 44);
+    }
+
+    75% {
+        background: white;
+    }
+
+    100% {
+        background: rgb(219, 44, 44);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.time {
+    font-style: italic;
+    line-height: 50px;
+    height: 50px;
+    width: 400px;
+    color: white;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.5;
+    margin: auto;
+}
